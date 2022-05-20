@@ -1,5 +1,5 @@
 //#include <QCoreApplication>
-#include <pybind11/embed.h>
+#include <Python.h>
 #include <QtGlobal>
 #include <iostream>
 

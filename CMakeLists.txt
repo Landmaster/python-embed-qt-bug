@@ -19,7 +19,6 @@ add_executable(pythontest
 )
 target_link_libraries(pythontest PRIVATE Qt${QT_VERSION_MAJOR}::Core)
 
-set(PYBIND11_FINDPYTHON ON)
-add_subdirectory(pybind11)
-target_link_libraries(pythontest PRIVATE pybind11::embed)
-target_link_libraries(pythontest PRIVATE pybind11::windows_extras)
+find_package (Python3 COMPONENTS Interpreter Development)
+
+target_link_libraries(pythontest PRIVATE Python3::Python)
